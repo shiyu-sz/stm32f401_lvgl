@@ -29,6 +29,7 @@
 #include "cm_backtrace.h"
 #include "nr_micro_shell.h"
 #include "tft_test.h"
+#include "ili9341.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
