@@ -55,7 +55,7 @@
 #include "ili9341.h"
 #include "stdlib.h"
 #include "math.h"
-#include "gui.h"	    
+#include "ili9341_gui.h"	    
 
 _m_tp_dev tp_dev=
 {

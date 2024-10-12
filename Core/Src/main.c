@@ -30,6 +30,11 @@
 #include "nr_micro_shell.h"
 #include "tft_test.h"
 #include "ili9341.h"
+#include "touch.h"
+
+#include "lvgl.h"                // 它为整个LVGL提供了更完整的头文件引用
+#include "lv_port_disp.h"        // LVGL的显示支�?
+#include "lv_port_indev.h"       // LVGL的触屏支�?
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -101,11 +106,21 @@ int main(void)
   shell_init();
   cm_backtrace_init("CmBacktrace", "V1.0.0", "V1.0.0");
   HAL_UARTEx_ReceiveToIdle_IT(&huart1, shell_uart_buff, SHELL_BUFF_SIZE);
-  LCD_Init();	   //液晶屏初始化
-  task_init();
 
-  lcd_test();
-  touch_test();
+  LCD_Init();	   //液晶屏初始化
+	if(tp_dev.init()) {
+		printf("tp init fail!\n");
+	}
+
+	lv_init();                             // LVGL 初始�?
+	lv_port_disp_init();                   // 注册LVGL的显示任�?
+	lv_port_indev_init();                  // 注册LVGL的触屏检测任�?
+
+  task_init();
+	lvgl_test();
+
+//   lcd_test();
+//   touch_test();
   /* USER CODE END 2 */
 
   /* Infinite loop */

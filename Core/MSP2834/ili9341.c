@@ -371,7 +371,7 @@ void LCD_Init(void)
 	delay_ms(120); 
 	LCD_WR_REG(0x29);       //Display on 
 
-  LCD_direction(USE_HORIZONTAL);//设置LCD显示方向 
+  	LCD_direction(USE_HORIZONTAL);//设置LCD显示方向 
 	LCD_Clear(WHITE);//清全屏白色
 }
  

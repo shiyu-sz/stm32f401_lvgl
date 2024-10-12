@@ -118,17 +118,17 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
 uint8_t SPI1_WriteByte(uint8_t data)
 {
   uint8_t recv = 0;
-  HAL_SPI_TransmitReceive(&hspi1, &data, &recv, 1, 100);
+  HAL_SPI_TransmitReceive(&hspi1, &data, &recv, 1, 10);
   return recv;
 }
 
 void SPI1_SetSpeed(uint8_t SpeedSet)
 {
-	if(SpeedSet==1) //高�??
+	if(SpeedSet==1) //高�??
 	{
 		hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
 	}
-	else//低�??
+	else//低�??
 	{
 		hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
 	}

@@ -54,7 +54,7 @@
 #include "ili9341.h"
 #include "string.h"
 #include "font.h" 
-#include "gui.h"
+#include "ili9341_gui.h"
 
 /*******************************************************************
  * @name       :void GUI_DrawPoint(uint16_t x,uint16_t y,uint16_t color)

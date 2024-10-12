@@ -3,13 +3,15 @@
 #include "gpio.h"
 #include "usart.h"
 #include "spi.h"
+#include "lvgl_task.h"
 
 //任务控制块
 struct task_tcb task_list[TASKS_COUNT] =
 {
 //  开关        初始状态        开始时间 运行时间   间隔时间        回调函数
     {TASK_ON,   TASK_WAIT,      10,    0,        10,         task_shell},
-    {TASK_ON,   TASK_WAIT,      20,    0,        100,       task_led},
+    {TASK_ON,   TASK_WAIT,      20,    0,        500,       task_led},
+    {TASK_ON,   TASK_WAIT,      20,    0,        5,       lvgl_task},
 };
 
 /**

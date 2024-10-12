@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "ili9341.h"
 #include "common.h"
-#include "gui.h"
+#include "ili9341_gui.h"
 #include "touch.h"
 
 void lcd_test()

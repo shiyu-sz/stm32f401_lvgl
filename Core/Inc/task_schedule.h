@@ -5,6 +5,7 @@
 enum task_id {
     TASK_SHELL = 0,
     TASK_LED,
+    TASK_LVGL,
     TASK_MAX
 };
 
