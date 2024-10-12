@@ -51,7 +51,7 @@
   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
 **************************************************************************************************/	
-#include "lcd.h"
+#include "ili9341.h"
 #include "string.h"
 #include "font.h" 
 #include "gui.h"

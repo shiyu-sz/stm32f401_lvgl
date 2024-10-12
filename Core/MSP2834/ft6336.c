@@ -54,7 +54,7 @@
 #include "ft6336.h"
 #include "touch.h"
 #include "string.h" 
-#include "lcd.h"
+#include "ili9341.h"
 #include "i2c.h"
 #include "common.h"
 
@@ -87,7 +87,12 @@ uint8_t FT6336_WR_Reg(uint16_t reg,uint8_t *buf,uint8_t len)
 ******************************************************************************/			  
 void FT6336_RD_Reg(uint16_t reg,uint8_t *buf,uint8_t len)
 {
-    HAL_StatusTypeDef ret = HAL_I2C_Master_Receive(&hi2c1, reg, buf, len, 100);
+	uint8_t send_buff[2];
+	send_buff[0] = reg & 0xff;
+	send_buff[1] = (reg>>8) & 0xff;
+	HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(&hi2c1, 0x70, send_buff, 1, HAL_MAX_DELAY);
+    delay_ms(1);
+	ret = HAL_I2C_Master_Receive(&hi2c1, 0x70, buf, len, HAL_MAX_DELAY);
 } 
 
 /*****************************************************************************

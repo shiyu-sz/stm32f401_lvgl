@@ -190,7 +190,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -314,10 +314,10 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
-            <OneElfS>1</OneElfS>
+            <OneElfS>0</OneElfS>
             <Strict>0</Strict>
             <EnumInt>0</EnumInt>
             <PlainCh>0</PlainCh>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F401xC</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Third_Party/CmBacktrace/cm_backtrace;../Third_Party/nr_micro_shell/inc;../Core/ILI9341;../Core/FT6336</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Third_Party/CmBacktrace/cm_backtrace;../Third_Party/nr_micro_shell/inc;..\Core\MSP2834</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1000,32 +1000,32 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Application/User/Core/FT6336</GroupName>
+          <GroupName>Application/User/Core/MSP2834</GroupName>
           <Files>
             <File>
               <FileName>ft6336.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\FT6336\ft6336.c</FilePath>
-            </File>
-            <File>
-              <FileName>touch.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\FT6336\touch.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Application/User/Core/ILI9341</GroupName>
-          <Files>
-            <File>
-              <FileName>lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\ILI9341\lcd.c</FilePath>
+              <FilePath>..\Core\MSP2834\ft6336.c</FilePath>
             </File>
             <File>
               <FileName>gui.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\ILI9341\gui.c</FilePath>
+              <FilePath>..\Core\MSP2834\gui.c</FilePath>
+            </File>
+            <File>
+              <FileName>ili9341.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\MSP2834\ili9341.c</FilePath>
+            </File>
+            <File>
+              <FileName>touch.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\MSP2834\touch.c</FilePath>
+            </File>
+            <File>
+              <FileName>tft_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\MSP2834\tft_test.c</FilePath>
             </File>
           </Files>
         </Group>

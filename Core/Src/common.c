@@ -3,8 +3,8 @@
 
 void delay_us(uint32_t n)
 {
-	for(int i=0; i<n; i++) {
-		__asm__("nop");
+	for(int i=0; i<n*10; i++) {
+		__nop(); __nop(); __nop(); __nop();
 	}
 }
 

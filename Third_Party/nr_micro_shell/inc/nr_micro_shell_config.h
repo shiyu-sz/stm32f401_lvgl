@@ -135,7 +135,7 @@ The end of line.
 #define NR_SHLL_FULL_ANSI 1
 
 /* Show logo or not. */
-// #define NR_SHELL_SHOW_LOG
+#define NR_SHELL_SHOW_LOG
 
 // /* Use NR_SHELL_CMD_EXPORT() or not */
 // #define NR_SHELL_USING_EXPORT_CMD
