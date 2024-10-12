@@ -1,0 +1,9 @@
+
+MDK-ARM/stm32f401_lvgl
+MDK-ARM/DebugConfig
+*.lst
+*.97158
+MDK-ARM/JLinkLog.txt
+MDK-ARM/JLinkSettings.ini
+.vscode
+*.scvd
